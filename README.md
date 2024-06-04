@@ -1,0 +1,1 @@
+# php-legal-from-detector
