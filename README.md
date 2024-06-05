@@ -2,7 +2,7 @@
 
 # TODO add a dev-container
 
-# TODO complete readme.md file
+# TODO complete readme.md file, with instruction for build, deps installation, test run, etc...
 
 # TODO complete contrib guidelines
 
