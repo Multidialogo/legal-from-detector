@@ -1,0 +1,55 @@
+[
+  {
+    "type":  "FREELANCE",
+    "stopWords": []
+  },
+  {
+    "type":  "GENERAL-PARTNERSHIP",
+    "acronyms": ["SNC"],
+    "stopWords": []
+  },
+  {
+    "type":  "JOINT-STOCK",
+    "acronyms": ["SPA"],
+    "stopWords": []
+  },
+  {
+    "type":  "LIMITED-LIABILITY",
+    "acronyms": ["SRL"],
+    "stopWords": []
+  },
+  {
+    "type":  "LIMITED-PARTNERSHIP",
+    "acronyms": ["SAS"],
+    "stopWords": []
+  },
+  {
+    "type":  "LIMITED-PARTNERSHIP-JOINT-STOCK",
+    "acronyms": ["SAPA"],
+    "stopWords": []
+  },
+  {
+    "type":  "ONE-PERSON-LIMITED-LIABILITY",
+    "acronyms": ["SRLU"],
+    "stopWords": []
+  },
+  {
+    "type":  "PERSON",
+    "stopWords": []
+  },
+  {
+    "type":  "SIMPLE-LIMITED-LIABILITY",
+    "acronyms": ["SRLS"],
+    "stopWords": []
+  },
+  {
+    "type":  "SIMPLE-PARTNERSHIP",
+    "acronyms": ["SS"],
+    "stopWords": []
+  },
+  {
+    "type":  "SOLE-PROPRIETORSHIP",
+    "acronyms": ["DI"],
+    "stopWords": []
+  }
+]
