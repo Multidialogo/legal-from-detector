@@ -1,0 +1,30 @@
+[
+  {
+    "type":  "FREELANCE",
+    "acronyms": ["SP"],
+    "stopWords": [
+      ["SOLE", "TRADER"],
+      ["SOLE", "TRAD"]
+    ]
+  },
+  {
+    "type":  "LIMITED-LIABILITY",
+    "acronyms": ["LLP"],
+    "stopWords": [
+      ["LIMITED", "LIABILITY", "PARTNERSHIP"],
+      ["LTD", "LIABILITY", "PARTNERSHIP"],
+      ["LTD", "LIABILITY", "PART"],
+      ["LIMITED", "LIABILITY", "PART"]
+    ]
+  },
+  {
+    "type":  "LIMITED-PARTNERSHIP",
+    "acronyms": ["LTD"],
+    "stopWords": [
+      ["LIMITED", "COMPANY"],
+      ["LIMITED", "COMP"],
+      ["LTD", "COMPANY"],
+      ["LTD", "COMP"]
+    ]
+  }
+]
