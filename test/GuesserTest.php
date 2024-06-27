@@ -13,7 +13,7 @@ class GuesserTest extends TestCase
      */
     public function testGuess(string $caseName, string $countryCode, string $text, string $expectedLegalFormCode): void
     {
-        $dictionary = Dictionary::makeFromDictionaryFile(__DIR__ . '/../res', 'it');
+        $dictionary = Dictionary::makeFromFile(__DIR__ . '/../res', 'it');
 
         static::assertEquals(
             $expectedLegalFormCode,
