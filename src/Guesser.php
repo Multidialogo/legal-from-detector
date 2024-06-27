@@ -2,9 +2,10 @@
 
 namespace multidialogo\LegalFormGuesser;
 
+
 class Guesser
 {
-    public static function guess(Dictionary $dictionary, string $completeCompanyName): string
+    public static function guess(Dictionary $dictionary, string $completeCompanyName): ?string
     {
         $terms = $dictionary->getTerms();
         foreach ($terms as $term) {
@@ -23,7 +24,7 @@ class Guesser
             }
         }
 
-        return 'UNKNOWN';
+        return null;
     }
 
     private static function matchAcronym(array $acronyms, string $haystack): bool
