@@ -13,8 +13,12 @@ class Dictionary
      */
     private array $terms;
 
-    public static function makeFromFile(string $dictionaryPath, string $countryCode): self
+    public static function makeFromFile(?string $dictionaryPath, string $countryCode): self
     {
+        if (!$dictionaryPath) {
+            $dictionaryPath = __DIR__ . '/../res';
+        }
+
         $dictionaryFilePath = "{$dictionaryPath}/{$countryCode}.json";
         if (!is_file($dictionaryFilePath)) {
             throw new  InvalidArgumentException("File {$dictionaryFilePath} does not exist");
