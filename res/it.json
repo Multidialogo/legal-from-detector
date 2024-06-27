@@ -1,37 +1,85 @@
 [
   {
     "type":  "FREELANCE",
-    "stopWords": []
+    "stopWords": [
+      ["UNIPERSONALE"],
+      ["UNIP"]
+    ]
   },
   {
     "type":  "GENERAL-PARTNERSHIP",
     "acronyms": ["SNC"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "NOME", "COLLETTIVO"],
+      ["SOCIETA", "NOME", "COLL"],
+      ["SOC", "NOME", "COLLETTIVO"],
+      ["SOC", "NOME", "COLL"]
+    ]
   },
   {
     "type":  "JOINT-STOCK",
     "acronyms": ["SPA"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "ACQUISTI"],
+      ["SOC", "ACQUISTI"]
+    ]
   },
   {
     "type":  "LIMITED-LIABILITY",
     "acronyms": ["SRL"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "RESP", "LIMITATA"],
+      ["SOCIETA", "RESPONSABILITA", "LIM"],
+      ["SOC", "RESP", "LIMITATA"],
+      ["SOC", "RESP", "LIM"],
+      ["SOC", "RESPONSABILITA", "LIM"]
+    ]
   },
   {
     "type":  "LIMITED-PARTNERSHIP",
     "acronyms": ["SAS"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "ACCOMANDITA", "SEMPLICE"],
+      ["SOC", "ACCOMANDITA", "SEMPLICE"],
+      ["SOCIETA", "ACC", "SEMPLICE"],
+      ["SOC", "ACC", "SEMPLICE"]
+    ]
   },
   {
     "type":  "LIMITED-PARTNERSHIP-JOINT-STOCK",
     "acronyms": ["SAPA"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "ACCOMANDITA", "AZIONI"],
+      ["SOC", "ACCOMANDITA", "AZIONI"],
+      ["SOCIETA", "ACC", "AZIONI"],
+      ["SOC", "ACC", "AZIONI"],
+      ["SOCIETA", "ACCOMANDITA", "AZ"],
+      ["SOC", "ACCOMANDITA", "AZ"],
+      ["SOCIETA", "ACC", "AZ"],
+      ["SOC", "ACC", "AZ"]
+    ]
   },
   {
     "type":  "ONE-PERSON-LIMITED-LIABILITY",
     "acronyms": ["SRLU"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "UNIPERSONALE", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "UNIPERSONALE", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "UNIPERSONALE", "RESP", "LIMITATA"],
+      ["SOCIETA", "UNIPERSONALE", "RESPONSABILITA", "LIM"],
+      ["SOC", "UNIPERSONALE", "RESP", "LIMITATA"],
+      ["SOC", "UNIPERSONALE", "RESP", "LIM"],
+      ["SOC", "UNIPERSONALE", "RESPONSABILITA", "LIM"],
+      ["SOCIETA", "UN", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "UN", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "UN", "RESP", "LIMITATA"],
+      ["SOCIETA", "UN", "RESPONSABILITA", "LIM"],
+      ["SOC", "UN", "RESP", "LIMITATA"],
+      ["SOC", "UN", "RESP", "LIM"],
+      ["SOC", "UN", "RESPONSABILITA", "LIM"]
+    ]
   },
   {
     "type":  "PERSON",
@@ -40,16 +88,39 @@
   {
     "type":  "SIMPLE-LIMITED-LIABILITY",
     "acronyms": ["SRLS"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "SEMPLIFICATA", "RESP", "LIMITATA"],
+      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
+      ["SOC", "SEMPLIFICATA", "RESP", "LIMITATA"],
+      ["SOC", "SEMPLIFICATA", "RESP", "LIM"],
+      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
+      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "SEMP", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "SEMP", "RESP", "LIMITATA"],
+      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIM"],
+      ["SOC", "SEMP", "RESP", "LIMITATA"],
+      ["SOC", "SEMP", "RESP", "LIM"],
+      ["SOC", "SEMP", "RESPONSABILITA", "LIM"]
+    ]
   },
   {
     "type":  "SIMPLE-PARTNERSHIP",
     "acronyms": ["SS"],
-    "stopWords": []
+    "stopWords": [
+      ["SOCIETA", "SEMPLICE"],
+      ["SOC", "SEMPLICE"]
+    ]
   },
   {
     "type":  "SOLE-PROPRIETORSHIP",
     "acronyms": ["DI"],
-    "stopWords": []
+    "stopWords": [
+      ["DITTA", "INDIVIDUALE"],
+      ["DITTA", "IND"],
+      ["D", "IND"],
+      ["D", "INDIVIDUALE"]
+    ]
   }
 ]

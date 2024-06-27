@@ -2,6 +2,7 @@
 
 namespace multidialogo\test\LegalFormGuesser;
 
+use multidialogo\LegalFormGuesser\Dictionary;
 use multidialogo\LegalFormGuesser\Guesser;
 use PHPUnit\Framework\TestCase;
 
@@ -12,9 +13,11 @@ class GuesserTest extends TestCase
      */
     public function testGuess(string $caseName, string $countryCode, string $text, string $expectedLegalFormCode): void
     {
+        $dictionary = Dictionary::makeFromDictionaryFile(__DIR__ . '/../res', 'it');
+
         static::assertEquals(
             $expectedLegalFormCode,
-            Guesser::guess($countryCode, $text)
+            Guesser::guess($dictionary, $text)
         );
     }
 

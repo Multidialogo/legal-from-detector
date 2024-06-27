@@ -14,7 +14,8 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "multidialogo\\sdk\\": "src/"
+      "multidialogo\\LegalFormGuesser\\": "src/",
+      "multidialogo\\test\\LegalFormGuesser\\": "test/"
     }
   },
   "autoload-dev": {
