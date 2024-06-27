@@ -13,7 +13,7 @@ class Dictionary
      */
     private array $terms;
 
-    public function makeFromDictionaryFile(string $dictionaryPath, string $countryCode): self
+    public static function makeFromFile(string $dictionaryPath, string $countryCode): self
     {
         $dictionaryFilePath = "{$dictionaryPath}/{$countryCode}.json";
         if (!is_file($dictionaryFilePath)) {
