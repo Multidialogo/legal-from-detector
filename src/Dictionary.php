@@ -29,7 +29,7 @@ class Dictionary
             throw new  InvalidArgumentException("File {$dictionaryFilePath} is not a valid JSON");
         }
 
-        $metaDataFilePath = "{$dictionaryFilePath}/_meta.json";
+        $metaDataFilePath = "{$dictionaryPath}/_meta.json";
         if (!is_file($dictionaryFilePath)) {
             throw new  $metaDataFilePath("File {$metaDataFilePath} does not exist");
         }
