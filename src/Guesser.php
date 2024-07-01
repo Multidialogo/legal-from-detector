@@ -7,6 +7,8 @@ class Guesser
 {
     public static function guess(Dictionary $dictionary, string $completeCompanyName): ?string
     {
+        $type = null;
+        $maxChainSize = 0;
         $terms = $dictionary->getTerms();
         foreach ($terms as $term) {
             if (static::matchAcronyms($term->getAcronyms(), $completeCompanyName)) {
@@ -16,12 +18,15 @@ class Guesser
             $stopWordChains = $term->getStopWordChains();
             foreach ($stopWordChains as $stopWordChain) {
                 if (static::matchStopWordChain($stopWordChain, $completeCompanyName)) {
-                    return $term->getType();
+                    if (count($stopWordChains) > $maxChainSize) {
+                        $type = $term->getType();
+                        $maxChainSize = count($stopWordChains);
+                    }
                 }
             }
         }
 
-        return null;
+        return $type;
     }
 
     private static function matchAcronyms(array $acronyms, string $haystack): bool
