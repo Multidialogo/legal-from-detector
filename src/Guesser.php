@@ -14,8 +14,8 @@ class Guesser
                 return $term->getCode();
             }
 
-            $stopWordChain = $term->getStopWordChains();
-            if (static::matchStopWordChain($stopWordChain, $completeCompanyName)) {
+            $stopWordChains = $term->getStopWordChains();
+            if (static::matchStopWordChain($stopWordChains, $completeCompanyName)) {
                 return $term->getCode();
             }
         }
@@ -39,13 +39,15 @@ class Guesser
         return false;
     }
 
-    private static function matchStopWordChain(array $stopWordsChain, string $haystack): bool
+    private static function matchStopWordChain(array $stopWordChains, string $haystack): bool
     {
         $normalizedHaystack = Util::normalizeText($haystack);
 
         $result = true;
-        foreach ($stopWordsChain as $stopWord) {
-            $result = $result && (false !== stripos($normalizedHaystack, $stopWord));
+        foreach ($stopWordChains as $stopWordChain) {
+            foreach ($stopWordChain as $stopWord) {
+                $result = $result && (false !== stripos($normalizedHaystack, $stopWord));
+            }
         }
 
         return $result;
