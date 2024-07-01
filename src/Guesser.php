@@ -9,17 +9,14 @@ class Guesser
     {
         $terms = $dictionary->getTerms();
         foreach ($terms as $term) {
-            $acronyms = $term->getAcronyms();
-            foreach ($acronyms as $acronym) {
-                if (static::matchAcronym($acronym, $completeCompanyName)) {
-                    return $term->getCode();
-                }
+            if (static::matchAcronyms($term->getAcronyms(), $completeCompanyName)) {
+                return $term->getType();
             }
 
             $stopWordChains = $term->getStopWordChains();
             foreach ($stopWordChains as $stopWordChain) {
                 if (static::matchStopWordChain($stopWordChain, $completeCompanyName)) {
-                    return $term->getCode();
+                    return $term->getType();
                 }
             }
         }
@@ -27,16 +24,14 @@ class Guesser
         return null;
     }
 
-    private static function matchAcronym(array $acronyms, string $haystack): bool
+    private static function matchAcronyms(array $acronyms, string $haystack): bool
     {
         $normalizedHaystack = Util::normalizeText($haystack);
         $variedAcronyms = Util::generateAcronymVariations($acronyms);
 
-        foreach ($variedAcronyms as $values) {
-            foreach ($values as $value) {
-                if (Util::stringEndsWith(" {$value}", $normalizedHaystack)) {
-                    return true;
-                }
+        foreach ($variedAcronyms as $value) {
+            if (Util::stringEndsWith(" {$value}", $normalizedHaystack)) {
+                return true;
             }
         }
 

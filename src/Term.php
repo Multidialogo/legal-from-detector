@@ -6,15 +6,15 @@ use InvalidArgumentException;
 
 class Term
 {
-    private string $code;
+    private string $type;
 
     private array $acronyms;
 
     private array $stopWordChains;
 
-    public function __construct(string $code, array $acronyms, array $stopWordChains)
+    public function __construct(string $type, array $acronyms, array $stopWordChains)
     {
-        $this->code = $code;
+        $this->type = $type;
         foreach ($acronyms as $acronym) {
             if (!is_string($acronym)) {
                 throw new InvalidArgumentException('Acronym name must be a string');
@@ -35,9 +35,9 @@ class Term
         $this->stopWordChains = $stopWordChains;
     }
 
-    public function getCode(): string
+    public function getType(): string
     {
-        return $this->code;
+        return $this->type;
     }
 
     public function getAcronyms(): array

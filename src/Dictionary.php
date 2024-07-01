@@ -6,6 +6,21 @@ use InvalidArgumentException;
 
 class Dictionary
 {
+
+    private const ACCEPTED_TYPES = [
+        "FREELANCE",
+        "GENERAL-PARTNERSHIP",
+        "JOINT-STOCK",
+        "LIMITED-LIABILITY",
+        "LIMITED-PARTNERSHIP",
+        "LIMITED-PARTNERSHIP-JOINT-STOCK",
+        "ONE-PERSON-LIMITED-LIABILITY",
+        "PERSON",
+        "SIMPLE-LIMITED-LIABILITY",
+        "SIMPLE-PARTNERSHIP",
+        "SOLE-PROPRIETORSHIP",
+    ];
+
     private string $countryCode;
 
     /**
@@ -29,22 +44,12 @@ class Dictionary
             throw new  InvalidArgumentException("File {$dictionaryFilePath} is not a valid JSON");
         }
 
-        $metaDataFilePath = "{$dictionaryFilePath}/_meta.json";
-        if (!is_file($dictionaryFilePath)) {
-            throw new  $metaDataFilePath("File {$metaDataFilePath} does not exist");
-        }
-
-        $metaData = json_decode(file_get_contents($metaDataFilePath));
-        if (!$metaData) {
-            throw new  InvalidArgumentException("File {$metaDataFilePath} is not a valid JSON");
-        }
-
         $terms = [];
         foreach ($termsData as $termData) {
-            if (!in_array($termData->code, $metaData)) {
-                throw new InvalidArgumentException("Invalid term code: {$termData->code}");
+            if (!in_array($termData->type, static::ACCEPTED_TYPES)) {
+                throw new InvalidArgumentException("Invalid term code: {$termData->type}");
             }
-            $terms[] = new Term($termData->code, $termData->acronyms, $termData->stopWords);
+            $terms[] = new Term($termData->type, $termData->acronyms ?? [], $termData->stopWords);
         }
 
         return new self($countryCode, $terms);

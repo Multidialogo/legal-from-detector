@@ -7,12 +7,9 @@ class Util
     public static function generateAcronymVariations(array $acronyms): array
     {
         $variedAcronyms = [];
-        foreach ($acronyms as $key => $values) {
-            $variedAcronyms[$key] = [];
-            foreach ($values as $value) {
-                $variedAcronyms[$key][] = $value;
-                $variedAcronyms[$key][] = implode('.', str_split($value)) . '.';
-            }
+        foreach ($acronyms as $acronym) {
+            $variedAcronyms[] = $acronym;
+            $variedAcronyms[] = implode('.', str_split($acronym)) . '.';
         }
 
         return $variedAcronyms;
