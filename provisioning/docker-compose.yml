@@ -1,0 +1,11 @@
+services:
+  dev-container:
+    working_dir: /app
+    environment:
+      COMPOSER_NO_DEV: "0"
+    build:
+      context: .
+      dockerfile: php-cli.Dockerfile
+    container_name: dev-container
+    volumes:
+      - ./..:/app

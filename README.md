@@ -1,6 +1,7 @@
 # php Legal form guesser
 
-# TODO add a dev-container
+This library aim is to guess the legal form of a company given it's extended name.
+It can match common dictionary occurrences and acronyms.
 
 # TODO complete readme.md file, with instruction for build, deps installation, test run, etc...
 

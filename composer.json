@@ -2,7 +2,6 @@
   "name": "multidialogo/legal-form-guesser",
   "description": "Legal form guesser: guess a company legal form from its extended name",
   "keywords": [
-    "multidialogo",
     "php",
     "legal form guesser",
     "company acronyms"
@@ -14,14 +13,13 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "multidialogo\\LegalFormGuesser\\": "src/",
-      "multidialogo\\test\\LegalFormGuesser\\": "test/"
+      "multidialogo\\LegalFormGuesser\\": "src/"
     }
   },
   "autoload-dev": {
     "files": ["test/autoload.php"],
     "psr-4": {
-      "multidialogo\\sdk\\test\\": "test/"
+      "multidialogo\\test\\LegalFormGuesser\\": "test/"
     }
   },
   "require-dev": {
