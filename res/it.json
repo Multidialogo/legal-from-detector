@@ -1,6 +1,7 @@
 [
   {
     "code":  "FREELANCE",
+    "acronyms": [],
     "stopWords": [
       ["UNIPERSONALE"],
       ["UNIP"]
@@ -83,6 +84,7 @@
   },
   {
     "code":  "PERSON",
+    "acronyms": [],
     "stopWords": []
   },
   {
