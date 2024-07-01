@@ -1,13 +1,13 @@
 [
   {
-    "type":  "FREELANCE",
+    "code":  "FREELANCE",
     "stopWords": [
       ["UNIPERSONALE"],
       ["UNIP"]
     ]
   },
   {
-    "type":  "GENERAL-PARTNERSHIP",
+    "code":  "GENERAL-PARTNERSHIP",
     "acronyms": ["SNC"],
     "stopWords": [
       ["SOCIETA", "NOME", "COLLETTIVO"],
@@ -17,7 +17,7 @@
     ]
   },
   {
-    "type":  "JOINT-STOCK",
+    "code":  "JOINT-STOCK",
     "acronyms": ["SPA"],
     "stopWords": [
       ["SOCIETA", "ACQUISTI"],
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "type":  "LIMITED-LIABILITY",
+    "code":  "LIMITED-LIABILITY",
     "acronyms": ["SRL"],
     "stopWords": [
       ["SOCIETA", "RESPONSABILITA", "LIMITATA"],
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "type":  "LIMITED-PARTNERSHIP",
+    "code":  "LIMITED-PARTNERSHIP",
     "acronyms": ["SAS"],
     "stopWords": [
       ["SOCIETA", "ACCOMANDITA", "SEMPLICE"],
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "type":  "LIMITED-PARTNERSHIP-JOINT-STOCK",
+    "code":  "LIMITED-PARTNERSHIP-JOINT-STOCK",
     "acronyms": ["SAPA"],
     "stopWords": [
       ["SOCIETA", "ACCOMANDITA", "AZIONI"],
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "type":  "ONE-PERSON-LIMITED-LIABILITY",
+    "code":  "ONE-PERSON-LIMITED-LIABILITY",
     "acronyms": ["SRLU"],
     "stopWords": [
       ["SOCIETA", "UNIPERSONALE", "RESPONSABILITA", "LIMITATA"],
@@ -82,11 +82,11 @@
     ]
   },
   {
-    "type":  "PERSON",
+    "code":  "PERSON",
     "stopWords": []
   },
   {
-    "type":  "SIMPLE-LIMITED-LIABILITY",
+    "code":  "SIMPLE-LIMITED-LIABILITY",
     "acronyms": ["SRLS"],
     "stopWords": [
       ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
@@ -106,7 +106,7 @@
     ]
   },
   {
-    "type":  "SIMPLE-PARTNERSHIP",
+    "code":  "SIMPLE-PARTNERSHIP",
     "acronyms": ["SS"],
     "stopWords": [
       ["SOCIETA", "SEMPLICE"],
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "type":  "SOLE-PROPRIETORSHIP",
+    "code":  "SOLE-PROPRIETORSHIP",
     "acronyms": ["DI"],
     "stopWords": [
       ["DITTA", "INDIVIDUALE"],
