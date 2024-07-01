@@ -10,17 +10,13 @@ class Guesser
         $terms = $dictionary->getTerms();
         foreach ($terms as $term) {
             $acronyms = $term->getAcronyms();
-            foreach ($acronyms as $acronym) {
-                if (static::matchAcronym($acronym, $completeCompanyName)) {
-                    return $term->getCode();
-                }
+            if (static::matchAcronym($acronyms, $completeCompanyName)) {
+                return $term->getCode();
             }
 
-            $stopWordChains = $term->getStopWordChains();
-            foreach ($stopWordChains as $stopWordChain) {
-                if (static::matchStopWordChain($stopWordChain, $completeCompanyName)) {
-                    return $term->getCode();
-                }
+            $stopWordChain = $term->getStopWordChains();
+            if (static::matchStopWordChain($stopWordChain, $completeCompanyName)) {
+                return $term->getCode();
             }
         }
 
