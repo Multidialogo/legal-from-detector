@@ -6,4 +6,3 @@ It can match common dictionary occurrences and acronyms.
 # local usage
 
 Just launch make.sh file included
-

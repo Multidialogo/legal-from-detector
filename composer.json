@@ -7,7 +7,7 @@
     "company acronyms"
   ],
   "require": {
-    "php": "^7.4"
+    "php": "^8.2"
   },
   "minimum-stability": "stable",
   "prefer-stable": true,

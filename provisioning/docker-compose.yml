@@ -7,5 +7,6 @@ services:
       context: .
       dockerfile: php-cli.Dockerfile
     container_name: dev-container
+    image: multidialogo-php-legal-form-guesser:latest
     volumes:
       - ./..:/app
