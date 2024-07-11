@@ -35,7 +35,7 @@ Keep in mind that the php82 version is intended to be used only to run unit test
 docker run --rm --interactive --tty -v ${PWD}/:/app multidialogo-php-legal-form-guesser-composer:latest composer <rest of the composer command>
 
 # docker compose command
-docker compose -f provisioning/docker-compose.yml run dev-container composer <rest of the composer command>
+docker compose -f provisioning/docker-compose.yml run --rm dev-container composer <rest of the composer command>
 ```
 
 ### Run unit tests
@@ -46,7 +46,7 @@ Run tests under php 7.4:
 docker run --rm --interactive --tty -v ${PWD}/:/app multidialogo-php-legal-form-guesser-composer:latest ./vendor/bin/phpunit -c .
 
 #docker compose command
-docker compose -f provisioning/docker-compose.yml run dev-container ./vendor/bin/phpunit -c .
+docker compose -f provisioning/docker-compose.yml run --rm dev-container ./vendor/bin/phpunit -c .
 ```
 
 Run tests under php 8.2:
