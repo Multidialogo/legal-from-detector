@@ -5,7 +5,8 @@ services:
       COMPOSER_NO_DEV: "0"
     build:
       context: .
-      dockerfile: php-cli.Dockerfile
+      dockerfile: php74-composer.Dockerfile
     container_name: dev-container
+    image: multidialogo-php-legal-form-guesser-composer:latest
     volumes:
       - ./..:/app

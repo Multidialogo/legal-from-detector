@@ -1,6 +1,5 @@
 #!/bin/bash
 
-docker compose -f provisioning/docker-compose.yml rm -f
-docker compose -f provisioning/docker-compose.yml build --no-cache
-docker compose -f provisioning/docker-compose.yml run dev-container composer install
-docker compose -f provisioning/docker-compose.yml run dev-container vendor/bin/phpunit -c .
+docker build -f provisioning/php74-composer.Dockerfile -t multidialogo-php-legal-form-guesser-composer:latest .
+docker build -f provisioning/php82-cli.Dockerfile -t multidialogo-php-legal-form-guesser-php82:latest .
+docker run --rm --interactive --tty -v "${PWD}"/:/app multidialogo-php-legal-form-guesser-composer:latest composer install
