@@ -15,14 +15,13 @@ class Util
         return $variedAcronyms;
     }
 
-    public static function stringEndsWith(string $needle, string $haystack): bool
+    public static function stringContains(string $needle, string $haystack): bool
     {
-        $length = strlen($needle);
-        if (!$length) {
+        if ($needle !== '' && strpos($haystack, $needle) !== false) {
             return true;
         }
 
-        return substr($haystack, -$length) === $needle;
+        return false;
     }
 
     public static function normalizeText(string $text): string

@@ -35,7 +35,7 @@ class Guesser
         $variedAcronyms = Util::generateAcronymVariations($acronyms);
 
         foreach ($variedAcronyms as $value) {
-            if (Util::stringEndsWith(" {$value}", $normalizedHaystack)) {
+            if (Util::stringContains(" {$value}", $normalizedHaystack)) {
                 return true;
             }
         }
