@@ -25,6 +25,26 @@
     ]
   },
   {
+    "type":  "SIMPLE-LIMITED-LIABILITY",
+    "acronyms": ["SRLS"],
+    "stopWords": [
+      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "SEMPLIFICATA", "RESP", "LIMITATA"],
+      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
+      ["SOC", "SEMPLIFICATA", "RESP", "LIMITATA"],
+      ["SOC", "SEMPLIFICATA", "RESP", "LIM"],
+      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
+      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIMITATA"],
+      ["SOC", "SEMP", "RESPONSABILITA", "LIMITATA"],
+      ["SOCIETA", "SEMP", "RESP", "LIMITATA"],
+      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIM"],
+      ["SOC", "SEMP", "RESP", "LIMITATA"],
+      ["SOC", "SEMP", "RESP", "LIM"],
+      ["SOC", "SEMP", "RESPONSABILITA", "LIM"]
+    ]
+  },
+  {
     "type":  "LIMITED-LIABILITY",
     "acronyms": ["SRL"],
     "stopWords": [
@@ -84,26 +104,6 @@
   {
     "type":  "PERSON",
     "stopWords": []
-  },
-  {
-    "type":  "SIMPLE-LIMITED-LIABILITY",
-    "acronyms": ["SRLS"],
-    "stopWords": [
-      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
-      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIMITATA"],
-      ["SOCIETA", "SEMPLIFICATA", "RESP", "LIMITATA"],
-      ["SOCIETA", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
-      ["SOC", "SEMPLIFICATA", "RESP", "LIMITATA"],
-      ["SOC", "SEMPLIFICATA", "RESP", "LIM"],
-      ["SOC", "SEMPLIFICATA", "RESPONSABILITA", "LIM"],
-      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIMITATA"],
-      ["SOC", "SEMP", "RESPONSABILITA", "LIMITATA"],
-      ["SOCIETA", "SEMP", "RESP", "LIMITATA"],
-      ["SOCIETA", "SEMP", "RESPONSABILITA", "LIM"],
-      ["SOC", "SEMP", "RESP", "LIMITATA"],
-      ["SOC", "SEMP", "RESP", "LIM"],
-      ["SOC", "SEMP", "RESPONSABILITA", "LIM"]
-    ]
   },
   {
     "type":  "SIMPLE-PARTNERSHIP",
