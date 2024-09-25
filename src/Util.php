@@ -10,6 +10,10 @@ class Util
         foreach ($acronyms as $acronym) {
             $variedAcronyms[] = $acronym;
             $variedAcronyms[] = implode('.', str_split($acronym)) . '.';
+
+            if (strlen($acronym) < 3) {
+                $variedAcronyms[] = implode('.', str_split($acronym));
+            }
         }
 
         return $variedAcronyms;
@@ -17,7 +21,14 @@ class Util
 
     public static function stringContains(string $needle, string $haystack): bool
     {
-        if ($needle !== '' && strpos($haystack, $needle) !== false) {
+        // 'DI' is not an acronym in the middle of a company name
+        if ('DI' === $needle && preg_match("/ $needle /", $haystack)) {
+            return false;
+        }
+
+        if ($needle !== '' && ((preg_match("/ $needle($|\s)/", $haystack))) ||
+            (preg_match("/ $needle /", $haystack))
+        ) {
             return true;
         }
 
